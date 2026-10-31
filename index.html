@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Documentação do AiKronoX Lab Backup, aplicativo de uso pessoal para backups criptografados no Google Drive.">
+  <title>AiKronoX Lab Backup</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #17202a; background: #f5f7fa; }
+    body { max-width: 48rem; margin: 0 auto; padding: 2rem 1.25rem; line-height: 1.65; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 2rem; }
+    a { color: #164c91; text-underline-offset: .18em; }
+    a:focus-visible { outline: 3px solid #164c91; outline-offset: 4px; }
+    main { background: #fff; border: 1px solid #dce2e9; border-radius: .5rem; padding: 1.5rem; }
+    h1 { line-height: 1.2; font-size: clamp(1.8rem, 5vw, 2.4rem); margin-top: 0; }
+    h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+    code { overflow-wrap: anywhere; }
+    footer { margin-top: 1.5rem; font-size: .9rem; color: #465463; }
+  </style>
+</head>
+<body>
+  <nav aria-label="Navegação principal">
+    <a href="index.html" aria-current="page">Início</a>
+    <a href="privacidade.html">Política de privacidade</a>
+  </nav>
+  <main>
+    <h1>AiKronoX Lab Backup</h1>
+    <p>Aplicativo de uso pessoal para proteger os dados do laboratório de desenvolvimento AiKronoX Lab.</p>
+    <h2>Finalidade</h2>
+    <p>O aplicativo permite armazenar e recuperar backups criptografados do ambiente n8n em uma pasta privada e exclusiva no Google Drive do responsável pelo laboratório. Não é oferecido como serviço a terceiros.</p>
+    <h2>Funcionamento</h2>
+    <p>Os pacotes são criptografados com age antes de qualquer upload. A transferência utiliza rclone e a API do Google Drive, com autorização OAuth do responsável. A chave privada de recuperação permanece fora do servidor de backup.</p>
+    <h2>Permissão solicitada</h2>
+    <p>O único escopo solicitado é <code>https://www.googleapis.com/auth/drive.file</code>. Ele permite gerenciar arquivos criados pelo aplicativo ou explicitamente autorizados a ele, sem conceder acesso geral a todos os arquivos do Drive.</p>
+    <p>A permissão drive.file limita o acesso do aplicativo aos arquivos criados por ele ou explicitamente autorizados. Separadamente, a criptografia age protege o conteúdo dos backups antes de seu envio ao Google Drive.</p>
+    <p>Consulte a <a href="privacidade.html">Política de privacidade</a> para conhecer o tratamento dos dados.</p>
+  </main>
+  <footer>Responsável: mantenedor do AiKronoX Lab. Contato: <a href="mailto:guitf00@gmail.com">guitf00@gmail.com</a>.</footer>
+</body>
+</html>
